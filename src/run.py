@@ -60,15 +60,7 @@ def main(args):
       Controller(
         engine,
         [ReolinkCamera(_ip, CAM_USER, CAM_PWD) for _ip in cameras_credentials],
-    )
-
-    while True:
-        start_ts = time.time()
-   stem controller", formatter_class=argparse.ArgumentDefaultsHelpFormatter
-    )
-    # Model
-    parser.add_argument("--model_path", type=str, default="data/model.onnx", help="model path")
-    parser.add_argument("--thresh", type=float, default=0.25, help="Confidence threshold")
+    )pe=float, default=0.25, help="Confidence threshold")
     # Camera & cache
     parser.add_argument("--creds", type=str, default="data/credentials.json", help="Camera credentials")
     parser.add_argument("--cache", type=str, default="./data", help="Cache folder")
