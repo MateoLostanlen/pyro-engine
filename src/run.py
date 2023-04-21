@@ -57,12 +57,7 @@ def main(args):
         backup_size=args.backup_size,
         alert_relaxation=args.alert_relaxation,
         frame_size=args.frame_size,
-        cache_backup_period=args.cache_backup_period,
-        cache_size=args.cache_size,
-        jpeg_quality=args.jpeg_quality,
-    )
-
-    sys_controller = SystemController(
+      Controller(
         engine,
         [ReolinkCamera(_ip, CAM_USER, CAM_PWD) for _ip in cameras_credentials],
     )
