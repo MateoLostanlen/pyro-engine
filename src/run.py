@@ -64,14 +64,7 @@ def main(args):
 
     while True:
         start_ts = time.time()
-        sys_controller.run(args.period)
-        # Sleep only once all images are processed
-        time.sleep(max(args.period - time.time() + start_ts, 0))
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Raspberry Pi system controller", formatter_class=argparse.ArgumentDefaultsHelpFormatter
+   stem controller", formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     # Model
     parser.add_argument("--model_path", type=str, default="data/model.onnx", help="model path")
