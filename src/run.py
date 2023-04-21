@@ -64,15 +64,7 @@ def main(args):
     # Camera & cache
     parser.add_argument("--creds", type=str, default="data/credentials.json", help="Camera credentials")
     parser.add_argument("--cache", type=str, default="./data", help="Cache folder")
-    parser.add_argument(
-        "--frame-size",
-        type=tuple,
-        default=(720, 1280),
-        help="Resize frame to frame_size before sending it to the api in order to save bandwidth (H, W)",
-    )
-    parser.add_argument("--jpeg_quality", type=int, default=80, help="Jpeg compression")
-    parser.add_argument("--cache-size", type=int, default=20, help="Maximum number of alerts to save in cache")
-    parser.add_argument(
+    pars
         "--alert_relaxation",
         type=int,
         default=2,
