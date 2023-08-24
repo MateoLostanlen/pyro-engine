@@ -9,7 +9,7 @@
 # 0 3 * * * bash /home/pi/pyro-engine/scripts/update_script.sh
 
 
-if [[ `git -C /home/pi/pyro-engine pull origin auto_update:auto_update | grep -c "up to date."` == 0 ]];
+if [[ `git -C /home/pi/pyro-engine pull origin auto_update | grep -c "up to date."` == 0 ]];
     then
         echo "pyro-engine up to date";
     else
