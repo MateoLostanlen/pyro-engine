@@ -13,19 +13,21 @@ if [[ `git -C /home/pi/pyro-engine pull origin auto_update | grep -c "up to date
     then
         echo "pyro-engine up to date";
     else
+
         echo "update" >> /home/pi/log.txt
         date >> /home/pi/log.txt
-        echo "pyro-engine updated from github";
-        echo "stop" >> /home/pi/log.txt
-        date >> /home/pi/log.txt
-        docker container stop pyro-engine_pyro-engine_1;
-        echo "build" >> /home/pi/log.txt
-        date >> /home/pi/log.txt
-        docker build /home/pi/pyro-engine -t pyronear/pyro-engine:latest;
-        echo "run" >> /home/pi/log.txt
-        date >> /home/pi/log.txt
-        docker-compose -f /home/pi/pyro-engine/docker-compose.yml up -d;
-        echo "done" >> /home/pi/log.txt
-        date >> /home/pi/log.txt
+        make -C /home/pi/pyro-engine run
+        # echo "pyro-engine updated from github";
+        # echo "stop" >> /home/pi/log.txt
+        # date >> /home/pi/log.txt
+        # docker container stop pyro-engine_pyro-engine_1;
+        # echo "build" >> /home/pi/log.txt
+        # date >> /home/pi/log.txt
+        # docker build /home/pi/pyro-engine -t pyronear/pyro-engine:latest;
+        # echo "run" >> /home/pi/log.txt
+        # date >> /home/pi/log.txt
+        # docker-compose -f /home/pi/pyro-engine/docker-compose.yml up -d;
+        # echo "done" >> /home/pi/log.txt
+        # date >> /home/pi/log.txt
 
 fi;
