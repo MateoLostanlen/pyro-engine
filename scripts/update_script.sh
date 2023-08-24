@@ -14,8 +14,8 @@ if [[ `git -C /home/pi/pyro-engine pull origin auto_update:auto_update | grep -c
         echo "pyro-engine up to date";
     else
         echo "pyro-engine updated from github";
-        docker container stop pyro-engine_pyro-engine_1
-        docker build /home/pi/pyro-engine -t pyronear/pyro-engine:latest
-        docker-compose -f /home/pi/pyro-engine/docker-compose.yml up -d
+        docker container stop pyro-engine_pyro-engine_1;
+        docker build /home/pi/pyro-engine -t pyronear/pyro-engine:latest;
+        docker-compose -f /home/pi/pyro-engine/docker-compose.yml up -d;
 
 fi;
