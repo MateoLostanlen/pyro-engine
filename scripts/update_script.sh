@@ -16,7 +16,7 @@ if [[ `git -C /home/pi/pyro-engine pull origin auto_update | grep -c "up to date
 
         echo "update" >> /home/pi/log.txt
         date >> /home/pi/log.txt
-        make -C /home/pi/pyro-engine run
+        bash /home/pi/test.sh
         # echo "pyro-engine updated from github";
         # echo "stop" >> /home/pi/log.txt
         # date >> /home/pi/log.txt
