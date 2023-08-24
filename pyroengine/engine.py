@@ -300,7 +300,7 @@ class Engine:
             device_str = f"Camera '{cam_id}' - " if isinstance(cam_id, str) else ""
             pred_str = "Wildfire detected" if conf > self.conf_thresh else "No wildfire"
             logging.info(f"{device_str}{pred_str} (confidence: {conf:.2%})")
-            logging.info(f"dummy log 12")
+            logging.info(f"dummy log 13")
 
             # Alert
             if conf > self.conf_thresh and len(self.api_client) > 0 and isinstance(cam_id, str):
