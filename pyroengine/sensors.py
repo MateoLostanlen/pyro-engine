@@ -34,8 +34,10 @@ class ReolinkCamera:
 
     def capture(self) -> Image.Image:
         """Retrieves the camera stream"""
-        response = requests.get(self._url, verify=False, timeout=3)
-        return Image.open(BytesIO(response.content))
+        url = "https://github.com/pyronear/pyro-engine/releases/download/v0.1.1/forest_sample.jpg"
+        im = Image.open(BytesIO(requests.get(url).content))
+        #response = requests.get(self._url, verify=False, timeout=3)
+        return im
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(ip_address={self.ip_address}, login={self.login})"
