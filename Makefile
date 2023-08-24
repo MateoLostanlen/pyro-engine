@@ -25,12 +25,12 @@ docker:
 
 # Run the engine wrapper
 run:
-	docker build . -t pyronear/pyro-engine:latest
-	docker-compose up -d
+	docker build -t /home/pi/pyro-engine pyronear/pyro-engine:latest
+	docker-compose -p pyronear up -d
 
 # Get log from engine wrapper
 log: 
-	docker logs -f --tail 50 pyro-engine_pyro-engine_1
+	docker logs -f --tail 50 pyronear_pyro-engine_1
 
 # Stop the engine wrapper
 stop:
