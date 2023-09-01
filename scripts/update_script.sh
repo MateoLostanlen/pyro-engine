@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # This script performs:
 # pull origin main
 #- if any change:
@@ -16,7 +17,10 @@ if [[ `git -C /home/pi/pyro-engine pull origin auto_update | grep -c "up to date
 
         echo "update" >> /home/pi/log.txt
         date >> /home/pi/log.txt
-        make -C /home/pi/pyro-engine run
+        cd /home/pi/pyro-engine
+        docker-compose down
+        docker build . -t pyronear/pyro-engine:latest
+	    docker-compose up -d
         # echo "pyro-engine updated from github";
         # echo "stop" >> /home/pi/log.txt
         # date >> /home/pi/log.txt
