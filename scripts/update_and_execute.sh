@@ -1,4 +1,5 @@
 #!/bin/bash
+#1
 
 # Print current date and time
 echo "$(date): Checking for updates"
