@@ -19,8 +19,6 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 then
     echo "$(date): New changes detected ! Updating and executing script..."
     git pull origin main
-    # Execute the make run command from the Makefile to rebuild and restart Docker containers
-    make run
     echo "$(date): Update done !"
 
 else
