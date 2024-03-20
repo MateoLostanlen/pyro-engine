@@ -4,6 +4,9 @@
 # Print current date and time
 echo "$(date): Checking for updates"
 
+export PATH=$PATH:/home/mateo/.local/bin/
+
+
 # Navigate to the repository directory
 cd /home/mateo/Desktop/engine/pyro-engine
 
