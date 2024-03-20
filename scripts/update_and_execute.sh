@@ -19,8 +19,8 @@ if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 then
     echo "$(date): New changes detected ! Updating and executing script..."
     git pull origin main
-    mkdir tt
-    echo "toto" >> tt/tt.txt
+    mkdir /home/mateo/Desktop/engine/pyro-engine/tt
+    echo "toto" >> /home/mateo/Desktop/engine/pyro-engine/tt/tt.txt
     echo "$(date): Update done !"
 
 else
