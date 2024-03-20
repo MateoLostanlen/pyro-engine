@@ -9,7 +9,7 @@ cd /home/mateo/Desktop/engine/pyro-engine
 # Check for updates and pull
 git fetch origin
 HEADHASH=$(git rev-parse HEAD)
-UPSTREAMHASH=$(git rev-parse main@{upstream})
+UPSTREAMHASH=$(git rev-parse origin/main)
 
 if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 then
